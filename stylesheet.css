@@ -1,10 +1,13 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #292626;
 }
 
 div#parent { /* Declaration or "selector" */
     border: 1px solid black;
     width: 780px;
+    margin: 0 auto;
+    background-color: #fff;
 }
 
 div#parent section {
@@ -12,26 +15,32 @@ div#parent section {
 }
 
 section.sub-head {
-    background: url('files/histHomepic.jpg') top left no-repeat;
+    /*background: url('files/histHomepic.jpg') top left no-repeat;*/
     background-image: url('files/histHomepic.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    height: 50px
+    height: 50px;
 }
 
-section.main-content-area {
-    /*.main-content-area {*/
+section.main-content-area { /* declaration for a section tag whose class is "main-content-area" */
     min-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-image: url('files/uofu_medallion_rt.gif');
+    background-repeat: no-repeat;
+    background-position: bottom right;
 
     nav.secondary { /* applies to all nav tags found inside (descendants of) section.main-content-area */
         min-height: 20px;
         border: 1px dotted red;
-        text-align: right;
+        /*text-align: right;*/
         padding-right: 20px;
         font-size: 11px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 3px;
 
         a { /* this targets all links in each of our navs */
             margin: 0 5px;
@@ -54,36 +63,40 @@ section.main-content-area {
     }
 
     section.brown-box {
-        background-color: #BEC4A1;
+        background-color: #BEC3A1;
         padding: 20px;
         border-radius: 10px;
         min-height: 400px;
         display: flex;
-
-        > * {
-            border: 1px solid black;
-            margin: 10px;
-        }
+        justify-content: space-between;
+        /*margin-bottom: 70px;*/
+        /*margin-right: 20px;*/
+        /*margin-left: 20px;*/
+        width: 90%;
+        margin: 5px auto 70px;
+        /* Above line reads margin 0 on top,
+        "the same amount" on the left and right,
+        and then finally 70px on the bottom */
 
         .left-side {
-            width: 40%;
+            width: 30%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
 
-            > * {
-                border: 3px solid black;
-            }
-
-            .nav {
-                /*min-height: 60%;*/
+            nav {
                 a {
+                    color: black;
                     display: block;
                     text-decoration: none;
+                    border-bottom: 2px solid #60663e;
+                    padding: 8px 0 8px 12px;
+                    text-transform: uppercase;
+                    font-size: 11px;
 
                     &:hover {
                         color: white;
-                        background-color: black;
+                        background-color: #60663e;
                     }
                 }
             }
@@ -96,17 +109,19 @@ section.main-content-area {
         }
 
         .right-side {
-            width: 60%;
+            width: 62%;
             background-color: white;
             padding: 10px;
 
             img {
-                margin-bottom: 10px;
+                width: 100%;
+                margin-bottom: 5px;
             }
 
             p {
                 font-size: 10px;
             }
+
 
             div.more {
                 /*text-align: right;*/
@@ -127,16 +142,14 @@ section.main-content-area {
     }
 }
 
-
 section.footer {
     background-color: #60663E;
-    padding: 8px 0;
-    font-size: 11px;
-    color: white;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    color: white;
+    font-size: 11px;
+    padding: 8px 0;
 }
+
 
 h4 {
     color: red;
