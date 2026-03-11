@@ -4,14 +4,12 @@ body {
 }
 
 div#parent { /* Declaration or "selector" */
-    border: 1px solid black;
     width: 780px;
     margin: 0 auto;
     background-color: #fff;
 }
 
 div#parent section {
-    border: 1px solid black;
 }
 
 section.sub-head {
@@ -83,6 +81,7 @@ section.main-content-area { /* declaration for a section tag whose class is "mai
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            padding-left: 20px;
 
             nav {
                 a {
@@ -90,7 +89,7 @@ section.main-content-area { /* declaration for a section tag whose class is "mai
                     display: block;
                     text-decoration: none;
                     border-bottom: 2px solid #60663e;
-                    padding: 8px 0 8px 12px;
+                    padding: 8px 30px 8px 12px;
                     text-transform: uppercase;
                     font-size: 11px;
 
@@ -104,7 +103,7 @@ section.main-content-area { /* declaration for a section tag whose class is "mai
             .links {
                 display: flex;
                 flex-direction: column-reverse;
-                align-items: center;
+                align-items: flex-start;
             }
         }
 
@@ -116,6 +115,10 @@ section.main-content-area { /* declaration for a section tag whose class is "mai
             img {
                 width: 100%;
                 margin-bottom: 5px;
+            }
+
+            h4{
+                color: darkolivegreen;
             }
 
             p {
@@ -146,14 +149,15 @@ section.footer {
     background-color: #60663E;
     text-align: center;
     color: white;
-    font-size: 11px;
+    font-size: 8px;
     padding: 8px 0;
+    FONT-WEIGHT: bold;
 }
 
 
 h4 {
     color: red;
-    border-bottom: 2px dashed red;
+    border-bottom: 1px dashed red;
     font-weight: unset;
     margin: 0 0 5px 0;
 }
