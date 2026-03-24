@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color : #282828;
+}
+
+div#parent {
+    width: 780px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+div#parent section {
+}
+
+section.sub-head {
+    background-image: url('files/histBooks01.jpg');
+    background-position: center;
+    height: 75px;
+    border-bottom: 8px #8B9155 solid;
+}
+
+section.main-content {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    nav.secondary { /* applies to all nav tags found inside (descendants of) section.main-content-area */
+        min-height: 20px;
+        padding-right: 20px;
+        font-size: 11px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 3px;
+
+        a { /* this targets all links in each of our navs */
+            margin: 0 5px;
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:hover { /* Pseudo-class declaration */
+                text-decoration: underline;
+            }
+        }
+
+        &.bottom {
+            font-size: 9px;
+
+            a {
+                text-transform: lowercase;
+            }
+        }
+
+    }
+
+   section.columns {
+       display: flex;
+       min-height: 400px;
+       justify-content: center;
+       width: 100%;
+       margin: 5px auto 70px;
+
+       .left-side {
+           width: 29%;
+           background-color: #F2F3F4;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-between;
+           padding-left: 18px;
+           padding-right: 20px;
+
+           nav {
+               a {
+                   color: #3E373A;
+                   display: block;
+                   text-decoration: none;
+                   border-bottom: 2px solid #8B9155;
+                   padding: 10px 30px 8px 12px;
+                   text-transform: uppercase;
+                   font-size: 11px;
+
+
+                   &:hover {
+                       color: white;
+                       background-color: #60663e;
+                   }
+               }
+           }
+           .links {
+               display: flex;
+               padding-top: 50px;
+               justify-content: space-between;
+               flex-direction: column-reverse;
+               align-items: flex-start;
+           }
+       }
+
+       .right-side {
+           display: flex;
+           flex-direction: column;
+           padding: 20px 40px 50px 40px;
+           font-size: 12px;
+           width: 500px;
+           text-align: justify;
+
+           h2{
+               color: #C31033;
+           }
+
+
+       }
+
+   }
+}
+
+section.footer {
+    background-color: #60663E;
+    text-align: center;
+    color: white;
+    font-size: 8px;
+    padding: 8px 0;
+}
+
