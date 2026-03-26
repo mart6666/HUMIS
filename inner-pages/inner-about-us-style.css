@@ -13,10 +13,11 @@ div#parent section {
 }
 
 section.sub-head {
-    background-image: url('files/histBooks01.jpg');
+    background-image: url('../files/histBooks01.jpg');
     background-position: center;
     height: 75px;
     border-bottom: 8px #8B9155 solid;
+
 }
 
 section.main-content {
@@ -30,7 +31,7 @@ section.main-content {
     nav.secondary { /* applies to all nav tags found inside (descendants of) section.main-content-area */
         min-height: 20px;
         padding-right: 20px;
-        font-size: 11px;
+        font-size: 9px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -64,7 +65,7 @@ section.main-content {
         margin: 5px auto 0;
 
         .left-side {
-            width: 29%;
+            width: 40%;
             background-color: #F2F3F4;
             display: flex;
             flex-direction: column;
@@ -72,6 +73,7 @@ section.main-content {
             padding-left: 18px;
             padding-right: 20px;
             padding-bottom: 20px;
+            border-right: 1px solid #b1b86f;
 
             nav.left-side-nav {
                 a {
@@ -81,7 +83,9 @@ section.main-content {
                     border-bottom: 2px solid #8B9155;
                     padding: 10px 30px 8px 12px;
                     text-transform: uppercase;
-                    font-size: 11px;
+                    font-size: 10px;
+                    width: 75%;
+
 
 
                     &:hover {
@@ -94,6 +98,8 @@ section.main-content {
             .links {
                 display: flex;
                 padding-top: 50px;
+                padding-bottom: 38px;
+                padding-left: 5px;
                 justify-content: space-between;
                 flex-direction: column-reverse;
                 align-items: flex-start;
@@ -105,10 +111,9 @@ section.main-content {
             flex-direction: column;
 
             main {
-                padding: 20px 40px 50px 40px;
-                border: 5px solid black;
+                padding: 20px 40px 80px 40px;
                 font-size: 12px;
-                width: 500px;
+                width: 460px;
                 text-align: justify;
 
 
@@ -116,11 +121,22 @@ section.main-content {
                     color: #C31033;
                 }
 
-                img.featured-image {
-                    width: 200px;
+                .photo-text{
                     float: right;
-                    margin-left: 10px;
+                    img.featured-image {
+                        width: 180px;
+                        margin-left: 20px;
+                    }
+
+                    h3{
+                        font-size: 12px;
+                        color: #C31033;
+                        margin: 6px;
+                        text-align: center;
+
+                    }
                 }
+
 
                 .align-right {
                     float: right;
